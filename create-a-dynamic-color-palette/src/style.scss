@@ -1,0 +1,47 @@
+@mixin dynamic-color-palette($base-color){
+    display: flex;
+    flex-wrap: wrap;
+
+    .color-box-text{
+        color: complement($base-color);       
+    }
+
+    .base-color{
+        background-color: $base-color;
+    }
+
+    @for $i from 1 through 4 {
+        .darken-#{$i}{
+            background-color: darken($base-color, $i * 5%);
+        }
+        .lighten-#{$i}{
+            background-color: lighten($base-color, $i * 5%);
+        }
+    }  
+
+}
+
+.box{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:5rem;
+    height: 5rem;
+    border:2px white solid;        
+}
+
+.container-1{
+    @include dynamic-color-palette(red);   
+}
+
+.container-2{
+    @include dynamic-color-palette(orange);   
+}
+
+.container-3{
+    @include dynamic-color-palette(green);   
+}
+
+.container-4{
+    @include dynamic-color-palette(blue);   
+}
