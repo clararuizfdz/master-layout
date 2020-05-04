@@ -1,10 +1,10 @@
  .navbar{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: baseline;
     background-color: #00909e;
     padding: 0;
-    flex-direction: row;
-    align-items: baseline;
     height: 50px;
 
     & li {
