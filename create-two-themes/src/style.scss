@@ -1,0 +1,46 @@
+@import '_themeA';
+//@import '_themeB';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+
+    .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;   
+        height: 7rem;
+        width: 9rem;
+        margin: 0.1rem;
+        border: 1px black solid;
+        border-radius: $border-radius;
+    }
+
+    .base {
+        background-color: $base-color;
+    } 
+
+    .important {
+        background-color: $important-color;
+    }
+
+    .warning {
+        background-color: $warning-color;
+    }
+
+    .principal-font{
+        font-family: $principal-font-family;
+    }
+
+    .secondary-font {
+        font-family: $secondary-font-family;
+    }
+
+    .shadow{
+        box-shadow: $box-shadow;
+    }
+
+}
+
+
