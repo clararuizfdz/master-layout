@@ -3,11 +3,11 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
-    background-color: #00909e;
+    background-color: #c0ca33;
     padding: 0;
     height: 50px;
 
-    & li {
+    li {
         display: flex;        
         justify-content: center;
         align-items: center;
@@ -16,10 +16,10 @@
         cursor: pointer;
 
         &:hover{
-            background-color: #27496d;
+            background-color: #8c9900;
         }
 
-        & a{
+        a{
             text-decoration: none;
             color: white;
             font-size: 1rem;
@@ -36,7 +36,7 @@
         align-items: baseline;
         height: 200px;
 
-        & li {
+        li {
             width: 100%;
         }
     }
