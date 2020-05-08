@@ -1,6 +1,7 @@
 
 @mixin create-card($base-color){
     display:grid;
+    background-color: white;
     grid-template-columns: 400px;
     grid-template-rows: auto;
     grid-template-areas: 
@@ -16,7 +17,6 @@
 
     .header{
         grid-area: header;
-        background-color: white;
 
         img{
             width: 400px;
@@ -25,7 +25,6 @@
 
     .title{
         grid-area: title;
-        background-color: white;
 
         h2{
             color: lighten($base-color,10%);
@@ -34,12 +33,10 @@
 
     .main-content{
         grid-area: main;
-        background-color: white;
     }
 
     .published-information{
         grid-area: date;
-        background-color: white;
         width: 100%;
         text-align: right;
 
@@ -50,7 +47,6 @@
 
     .more-information{
         grid-area: more-information;
-        background-color: white;
         width: 100%;
         text-align: center;
         height: 3rem;
@@ -86,11 +82,21 @@ body{
 .container{
     background-color: #ededed;
     display:grid;
-    justify-items: center;    
-    grid-template-columns: 1fr 1fr;
+    justify-items: center;  
+    grid-gap: 1rem;  
+    grid-template-columns: 1fr 1fr 1fr;;
     grid-template-rows: auto;
     grid-template-areas:
-    "card-1 card-2";
+    "card-1 card-2 card-3";
+
+    @media screen and(max-width:768px){
+        grid-template-columns: auto;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+        "card-1"
+        "card-2"
+        "card-3"
+    }
 }
 .card-container-1{
     grid-area: card-1;
@@ -99,5 +105,11 @@ body{
 
 .card-container-2{
     grid-area: card-2;
-   @include create-card(orange);
+    @include create-card(#feb72b);
+
+} 
+
+.card-container-3{
+    grid-area: card-3;
+   @include create-card(#eb6383);
 } 
