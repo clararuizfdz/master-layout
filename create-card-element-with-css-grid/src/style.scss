@@ -1,23 +1,14 @@
-$base-color: #7B9F35;
 
-body{
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    background-color: #ededed;
-    font-family: "DM Mono"; 
-}
-.container{
-    background-color: #ededed;
+@mixin create-card($base-color){
     display:grid;
-    grid-template-columns: 1rem 400px auto;
+    grid-template-columns: 400px;
     grid-template-rows: auto;
     grid-template-areas: 
-    ". header ."
-    ". title ."
-    ". main ."
-    ". date ."
-    ". more-information .";
+    " header "
+    " title "
+    " main "
+    " date "
+    " more-information ";
 
     .text{
         padding: 0 0.5rem;
@@ -82,4 +73,31 @@ body{
             }
         }
     }
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #ededed;
+    font-family: "DM Mono"; 
+}
+
+.container{
+    background-color: #ededed;
+    display:grid;
+    justify-items: center;    
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "card-1 card-2";
+}
+.card-container-1{
+    grid-area: card-1;
+   @include create-card(#7B9F35);
+} 
+
+.card-container-2{
+    grid-area: card-2;
+   @include create-card(orange);
 } 
