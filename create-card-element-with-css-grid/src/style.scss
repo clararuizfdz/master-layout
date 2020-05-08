@@ -1,0 +1,59 @@
+$base-color: #7B9F35;
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #ededed;
+    font-family: "DM Mono"; 
+
+.container{
+    display: inline-grid;  
+    grid-template-columns: 400px;
+    grid-template-rows: 325px 0.5fr 2fr 0.5fr 0.5fr;
+    background-color: #ffffff;     
+    margin-top: 1rem;
+    margin-left: 1rem;
+    
+    .text{
+        padding: 0 0.5rem;        
+    }
+
+    .title{
+        color: lighten($base-color,10%);
+    }
+
+    .main{
+        font-size: 0.9rem;        
+    }
+
+    .header{
+        width: 400px;
+    }
+
+    .additional-information{
+        justify-self: flex-end;
+
+        .text-color{
+            color: lighten($base-color,10%);
+        }
+    }
+
+    .footer-more-info{
+        background-color: $base-color;
+        color: white;
+        font-size: 1rem;
+        justify-self: center;
+        width: 80%;
+        height: 80%;
+        border-radius:50px;
+        box-shadow: 0 5px darken($base-color, 10%);
+        border: none;
+                     
+        &:hover{
+            background-color: darken($base-color, 10%);
+            height: calc(80% + 3px);
+            box-shadow: 0 2px darken($base-color, 20%);
+        }
+    }
+}
+}
